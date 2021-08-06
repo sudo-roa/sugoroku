@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="sugoroku.css">
+        <script src="sugoroku.js"></script>
+        <title>すごろく</title>
+    </head>
+    <header>
+        <div class="header-container">
+            <p class="title">ろあのすごろく</p>
+            <button class="header-contents" id="num-btn" onclick="dice()">さいころ</button>
+            <input type="text" class="header-contents" id="num-textarea" cols="5" rows="1" placeholder="さいころを振ってください" readonly>
+            <p class="header-contents" >回数</p>
+            <input type="text" class="header-contents" id="count" cols="2" rows="1" readonly>
+        </div>
+    </header>
+    <body>
+        <div class="body-container">
+            <table>
+                <tr>                
+                    <td class="square player" id="masu1" style="background-color: bisque;">st</td>
+                    <td class="square" id="masu2">2マス目</td>
+                    <td class="square" id="masu3">3マス目</td>
+                    <td class="square" id="masu4">4マス目</td>
+                    <td class="square" id="masu5">5マス目</td>
+                    <td class="square" id="masu6">6マス目</td>
+                    <td class="square" id="masu7">7マス目</td>
+                    <td class="square" id="masu8">8マス目</td>
+                    <td class="square" id="masu9">9マス目</td>
+                </tr>
+                <tr>                
+                    <td class="square dummy yama"></td>
+                    <td class="square dummy yama"></td>
+                    <td class="square dummy yama"></td>
+                    <td class="square dummy yama"></td>
+                    <td class="square dummy yama"></td>
+                    <td class="square dummy yama"></td>
+                    <td class="square dummy yama"></td>
+                    <td class="square dummy yama"></td>
+                    <td class="square" id="masu10">10マス目</td>
+                </tr>
+                <tr>                
+                    <td class="square" id="masu31">31マス目</td>
+                    <td class="square" id="masu30">30マス目</td>
+                    <td class="square" id="masu29">29マス目</td>
+                    <td class="square dummy yama"></td>
+                    <td class="square" id="masu19">19マス目</td>
+                    <td class="square" id="masu18">18マス目</td>
+                    <td class="square" id="masu17">17マス目</td>
+                    <td class="square dummy yama"></td>
+                    <td class="square" id="masu11">11マス目</td>
+                </tr>
+                <tr>                
+                    <td class="square" id="masu32">32マス目</td>
+                    <td class="square dummy yama"></td>
+                    <td class="square" id="masu28">28マス目</td>
+                    <td class="square dummy yama"></td>
+                    <td class="square" id="masu20">20マス目</td>
+                    <td class="square dummy yama"></td>
+                    <td class="square" id="masu16">16マス目</td>
+                    <td class="square dummy yama"></td>
+                    <td class="square" id="masu12">12マス目</td>
+                </tr>
+                <tr>                
+                    <td class="square" id="masu33">33マス目</td>
+                    <td class="square dummy yama"></td>
+                    <td class="square" id="masu27">27マス目</td>
+                    <td class="square dummy yama"></td>
+                    <td class="square" id="masu21">21マス目</td>
+                    <td class="square dummy yama"></td>
+                    <td class="square" id="masu15">15マス目</td>
+                    <td class="square" id="masu14">14マス目</td>
+                    <td class="square" id="masu13">13マス目</td>
+                </tr>
+                <tr>                
+                    <td class="square" id="masu34">34マス目</td>
+                    <td class="square dummy yama"></td>
+                    <td class="square" id="masu26">26マス目</td>
+                    <td class="square dummy yama"></td>
+                    <td class="square" id="masu22">22マス目</td>
+                    <td class="square dummy yama"></td>
+                    <td class="square dummy yama"></td>
+                    <td class="square dummy yama"></td>
+                    <td class="square dummy yama"></td>
+                </tr>
+                <tr>                
+                    <td class="square" id="masu35">35マス目</td>
+                    <td class="square dummy yama"></td>
+                    <td class="square" id="masu25">25マス目</td>
+                    <td class="square" id="masu24">24マス目</td>
+                    <td class="square" id="masu23">23マス目</td>
+                    <td class="square dummy yama"></td>
+                    <td class="square" id="masu45">45マス目</td>
+                    <td class="square" id="masu46">46マス目</td>
+                    <td class="square" id="masu47">47マス目</td>
+                </tr>
+                <tr>                
+                    <td class="square" id="masu36">36マス目</td>
+                    <td class="square dummy yama"></td>
+                    <td class="square dummy yama"></td>
+                    <td class="square dummy yama"></td>
+                    <td class="square dummy yama"></td>
+                    <td class="square dummy yama"></td>
+                    <td class="square" id="masu44">44マス目</td>
+                    <td class="square dummy yama"></td>
+                    <td class="square" id="masu48">48マス目</td>
+                </tr>
+                <tr>                
+                    <td class="square" id="masu37">37マス目</td>
+                    <td class="square" id="masu38">38マス目</td>
+                    <td class="square" id="masu39">39マス目</td>
+                    <td class="square" id="masu40">40マス目</td>
+                    <td class="square" id="masu41">41マス目</td>
+                    <td class="square" id="masu42">42マス目</td>
+                    <td class="square" id="masu43">43マス目</td>
+                    <td class="square dummy yama"></td>
+                    <td class="square" id="masu49">goal</td>
+                </tr>
+            </table>
+            <div class="out" id="masu54">54</div>
+            <div class="out" id="masu53">53</div>
+            <div class="out" id="masu52">52</div>
+            <div class="out" id="masu51">51</div>
+            <div class="out" id="masu50">50</div>
+        </div>
+    </body>
+</html>
