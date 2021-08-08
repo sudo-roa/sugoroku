@@ -11,7 +11,7 @@
     <header>
         <div class="header-container">
             <p class="title">ろあのすごろく</p>
-            <button class="header-contents" id="num-btn" onclick="dice()">さいころ</button>
+            <button class="header-contents" id="num-btn" onclick="sugoroku()">さいころ</button>
             <input type="text" class="header-contents" id="num-textarea" cols="5" rows="1" placeholder="さいころを振ってください" readonly>
             <p class="header-contents" >回数</p>
             <input type="text" class="header-contents" id="count" cols="2" rows="1" readonly>
@@ -21,7 +21,7 @@
         <div class="body-container">
             <table>
                 <tr>                
-                    <td class="square player" id="masu1" style="background-color: bisque;">st</td>
+                    <td class="square player_right" id="masu1" style="background-color: bisque;">st</td>
                     <td class="square" id="masu2">2マス目</td>
                     <td class="square" id="masu3">3マス目</td>
                     <td class="square" id="masu4">4マス目</td>
@@ -120,11 +120,21 @@
                     <td class="square" id="masu49">goal</td>
                 </tr>
             </table>
-            <div class="out" id="masu54">54</div>
-            <div class="out" id="masu53">53</div>
-            <div class="out" id="masu52">52</div>
-            <div class="out" id="masu51">51</div>
-            <div class="out" id="masu50">50</div>
+            <table>
+                <tr>                
+                    <div class="out"></div>
+                    <div class="out"></div>
+                    <div class="out"></div>
+                    <div class="out"></div>
+                    <div class="out"></div>
+                    <div class="out"></div>
+                    <div class="out"></div>
+                    <div class="out"></div>
+                    <div class="out"></div>
+                    <div class="out"></div>
+                </tr>
+            </table>
+       
         </div>
     </body>
 </html>

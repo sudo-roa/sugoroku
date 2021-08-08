@@ -25,6 +25,17 @@
     padding:24px;
     margin:10px auto;
     border: solid ;
+
+}
+
+.player_right{
+    background-image: url(./images/walk_right.png);
+    z-index: 10;
+}
+
+.player_left{
+    background-image: url(./images/walk_left.png);
+    z-index: 10;
 }
 
 .square{
@@ -37,9 +48,13 @@
 
 .out{
     display: inline-block;
-    padding:16px;
-    margin:8px 28px;
-    border:solid;
+    /* padding:16px; */
+    margin:8px 0px;
+    background-image: url(./images/out1.png);
+    background-repeat: no-repeat;
+    height: 56px;
+    width: 56px;
+    border:none;
 }
 
 .yama{
